@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hind Alkhaldi | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#120d0b;
+    --card:#1f1512;
+    --accent:#9fb8a8;
+    --text:#f5f5f5;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero h1 span{
+    color:var(--accent);
+}
+
+.typing{
+    margin-top:15px;
+    font-size:15px;
+    opacity:0.8;
+}
+
+/* SECTIONS */
+section{
+    padding:80px 15%;
+}
+
+.card{
+    background:var(--card);
+    padding:25px;
+    border-radius:16px;
+    margin-bottom:20px;
+    border:1px solid rgba(159,184,168,0.2);
+}
+
+h3{
+    color:var(--accent);
+    margin-bottom:15px;
+}
+
+/* SKILLS */
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill{
+    padding:8px 14px;
+    border:1px solid var(--accent);
+    border-radius:20px;
+    font-size:12px;
+}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:15px;
+}
+
+.project{
+    padding:18px;
+    border-radius:14px;
+    background:rgba(255,255,255,0.02);
+    border:1px solid rgba(159,184,168,0.2);
+}
+
+/* CONTACT */
+.contact a{
+    margin:5px;
+    padding:10px 14px;
+    border-radius:10px;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    text-decoration:none;
+    display:inline-block;
+}
+
+.contact a:hover{
+    background:var(--accent);
+    color:#120d0b;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Hi, I'm <span>Hind Alkhaldi</span></h1>
+    <div class="typing" id="typing"></div>
+</div>
+
+<!-- ABOUT -->
+<section>
+<div class="card">
+    <h3>About Me</h3>
+    <p>
+        I am a Computer Engineering student passionate about Artificial Intelligence, robotics,
+        and UI/UX design. I love building smart systems and turning ideas into real-world applications.
+    </p>
+</div>
+
+<!-- SKILLS -->
+<div class="card">
+    <h3>Skills</h3>
+    <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">AI</div>
+        <div class="skill">UI/UX</div>
+        <div class="skill">Arduino</div>
+        <div class="skill">Problem Solving</div>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="card">
+    <h3>Projects</h3>
+
+    <div class="projects">
+        <div class="project">
+            🌹 Smart Rose Tracking App  
+            <br><br>
+            A smart system that tracks rose growth using sensors and data analysis to improve agricultural efficiency.
+        </div>
+
+        <div class="project">
+            🤖 AI Robot Builder  
+            <br><br>
+            A robotics project focused on designing and building a smart robot from scratch with automation features.
+        </div>
+
+        <div class="project">
+            💡 UI/UX Design Practice  
+            <br><br>
+            Designing modern user interfaces for mobile and web applications using Figma and design principles.
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div class="card">
+    <h3>Contact</h3>
+    <div class="contact">
+        <a href="mailto:hind.alkhaldi@email.com">Email</a>
+        <a href="https://x.com/">X</a>
+        <a href="https://linkedin.com/">LinkedIn</a>
+        <a href="tel:+966500000000">Phone</a>
+    </div>
+</div>
+</section>
+
+<script>
+const text = "Computer Engineer • AI Enthusiast • UI/UX Designer";
+let i = 0;
+
+function type(){
+    if(i < text.length){
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 50);
+    }
+}
+type();
+
+</script>
+
+</body>
+
+</html>
